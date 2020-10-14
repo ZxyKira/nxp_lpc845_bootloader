@@ -1,0 +1,4 @@
+[submodule "reference/nxp_lpc845_driver"]
+	path = reference/nxp_lpc845_driver
+	url = https://github.com/ZxyKira/nxp_lpc845_driver.git
+	branch = release
