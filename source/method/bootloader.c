@@ -15,7 +15,7 @@
 /*-----------------------------------------------------------------------------------------
  *    Extern Function/Variable
  */
-
+extern void delay(uint32_t us);
 /*-----------------------------------------------------------------------------------------
  *    Local Type/Structure
  */
@@ -44,6 +44,7 @@ __ASM __attribute__( ( noreturn ) ) void BootJumpASM( uint32_t SP, uint32_t RH )
  *    Public Function
  */
 void BootJump( uint32_t *Address ){
+	delay(200);
 	NVIC->ICER[0] = 0xFFFFFFFF;
 	NVIC->ICPR[0] = 0xFFFFFFFF;
 	SysTick->CTRL = 0;
@@ -54,6 +55,8 @@ void BootJump( uint32_t *Address ){
 		__set_CONTROL( __get_CONTROL( ) & ~CONTROL_SPSEL_Msk ) ;
 	}
 	SCB->VTOR = ( uint32_t )Address ;
+	
+	delay(200);
 	BootJumpASM( Address[ 0 ], Address[ 1 ] ) ;
 }
 

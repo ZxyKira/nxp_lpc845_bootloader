@@ -1,30 +1,23 @@
 /*-----------------------------------------------------------------------------------------
- *    File Name   :loop.c
+ *    File Name   :timer.c
  *    Version     :V1.0.0
- *    Create Date :2020-10-12
- *    Modufy Date :2020-10-13
+ *    Create Date :2020-10-15
+ *    Modufy Date :2020-10-15
  *    Information :
  */
-#include "fsl_power.h"
-#include "fsl_clock.h"
-#include "fsl_syscon.h"
-#include "LPC845.h"
-#include "stdio.h"
+#include <stdint.h>
+#include "fsl_mrt.h"
 
 #include "fw_chip.h"
-
 
 /*-----------------------------------------------------------------------------------------
  *    Parameter
  */
-#define LOGOUT(fmt, ...) terminal_write(&terminal_cache[0], sprintf(&terminal_cache[0],fmt, ##__VA_ARGS__))
-
+ 
 /*-----------------------------------------------------------------------------------------
  *    Extern Function/Variable
  */
 extern fw_io_entity_t LED[8];
-extern void terminal_write(void* str, uint32_t len);
-extern char terminal_cache[256];
 /*-----------------------------------------------------------------------------------------
  *    Local Type/Structure
  */
@@ -32,32 +25,30 @@ extern char terminal_cache[256];
 /*-----------------------------------------------------------------------------------------
  *    Local Variable
  */
-extern void BootJump( uint32_t *Address );
-extern void terminal_start0(void);
+ 
 /*-----------------------------------------------------------------------------------------
  *    inline Function
  */
  
 /*-----------------------------------------------------------------------------------------
  *    Public Function
- */
-void delay(uint32_t us){
-	uint32_t i;
-	for(i=0; i<=us; i++){
-		__NOP();
-		__NOP();
-		__NOP();
-		__NOP();
-	}
+ */ 
+void timer_init(void){
+	uint32_t mrt_clock = CLOCK_GetFreq(kCLOCK_CoreSysClk);
+	mrt_config_t mrtConfig;
+	MRT_GetDefaultConfig(&mrtConfig);
+	MRT_Init(MRT0, &mrtConfig);
+	MRT_SetupChannelMode(MRT0, kMRT_Channel_0, kMRT_RepeatMode);
+	MRT_EnableInterrupts(MRT0, kMRT_Channel_0, kMRT_TimerInterruptEnable);
+	EnableIRQ(MRT0_IRQn);
+	MRT_StartTimer(MRT0, kMRT_Channel_0, USEC_TO_COUNT(250000U, mrt_clock));
+} 
+
+void MRT0_IRQHandler(void){
+	MRT_ClearStatusFlags(MRT0, kMRT_Channel_0, kMRT_TimerInterruptFlag);
+	fw_io_entity_api.setToggle(LED[0]);
 }
 
-void loop(){
-
-	
-	terminal_start0();
-	
-	//BootJump((uint32_t*)0x00008000);
-}
 /*-----------------------------------------------------------------------------------------
  *    End of file
  */

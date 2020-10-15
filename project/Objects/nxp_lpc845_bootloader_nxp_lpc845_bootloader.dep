@@ -1,164 +1,0 @@
-Dependencies for Project 'nxp_lpc845_bootloader', Target 'nxp_lpc845_bootloader': (DO NOT MODIFY !)
-F (..\source\chip\startup_LPC845.s)(0x5F86A095)(--cpu Cortex-M0+ -g --apcs=interwork -I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 528" --pd "CPU_LPC845M301JBD64 SETA 1" --pd "NO_CRP SETA 1"--list .\listings\startup_lpc845.lst --xref -o .\objects\startup_lpc845.o --depend .\objects\startup_lpc845.d)
-F (..\source\chip\system_LPC845.c)(0x5F86A095)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\system_lpc845.o --omf_browse .\objects\system_lpc845.crf --depend .\objects\system_lpc845.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (..\reference\nxp_lpc845_driver\fsl_device_registers.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\LPC845.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\core_cm0plus.h)(0x5F87B455)
-I (..\reference\nxp_lpc845_driver\cmsis_version.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_compiler.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_armcc.h)(0x5F86B233)
-I (..\source\chip\system_LPC845.h)(0x5F86A095)
-I (..\reference\nxp_lpc845_driver\LPC845_features.h)(0x5F86B233)
-F (..\source\chip\system_LPC845.h)(0x5F86A095)()
-F (..\source\main\loop.c)(0x5F87B5CE)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\loop.o --omf_browse .\objects\loop.crf --depend .\objects\loop.d)
-I (..\reference\nxp_lpc845_driver\fsl_power.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_common.h)(0x5F86B233)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
-I (..\reference\nxp_lpc845_driver\fsl_device_registers.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\LPC845.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\core_cm0plus.h)(0x5F87B455)
-I (..\reference\nxp_lpc845_driver\cmsis_version.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_compiler.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_armcc.h)(0x5F86B233)
-I (..\source\chip\system_LPC845.h)(0x5F86A095)
-I (..\reference\nxp_lpc845_driver\LPC845_features.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_clock.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_reset.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_syscon.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_syscon_connections.h)(0x5F86B233)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
-I (..\reference\mcu_framework_lpc845\fw_chip.h)(0x5F87A477)
-I (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)
-F (..\source\main\main.c)(0x5F86A095)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-F (..\source\main\start.c)(0x5F87A543)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\start.o --omf_browse .\objects\start.crf --depend .\objects\start.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (..\reference\mcu_framework_lpc845\fw_chip.h)(0x5F87A477)
-I (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)
-F (..\source\method\periph_io.c)(0x5F86A095)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\periph_io.o --omf_browse .\objects\periph_io.crf --depend .\objects\periph_io.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (..\reference\mcu_framework_lpc845\fw_chip.h)(0x5F87A477)
-I (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)
-F (..\source\method\terminal.c)(0x5F86A095)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\terminal.o --omf_browse .\objects\terminal.crf --depend .\objects\terminal.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (..\reference\mcu_framework_lpc845\fw_chip.h)(0x5F87A477)
-I (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)
-F (..\source\method\bootloader.c)(0x5F87B487)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (..\reference\nxp_lpc845_driver\LPC845.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\core_cm0plus.h)(0x5F87B455)
-I (..\reference\nxp_lpc845_driver\cmsis_version.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_compiler.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_armcc.h)(0x5F86B233)
-I (..\source\chip\system_LPC845.h)(0x5F86A095)
-F (..\source\config\fw_define.h)(0x5F87AEAF)()
-F (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)()
-F (..\reference\mcu_framework_lpc845\Framework-LPC845.lib)(0x5F86B5E7)()
-F (..\reference\mcu_framework_lpc845\fw_chip.h)(0x5F87A477)()
-F (..\reference\mcu_framework_lpc845\fw_chip_type.h)(0x5F86B5E7)()
-F (..\reference\mcu_framework_lpc845\fw_define.c)(0x5F86B5E7)(--c99 -c --cpu Cortex-M0+ -g -O3 --apcs=interwork --split_sections -I ..\source\chip -I ..\source\config -I ..\source\main -I ..\source\method -I ..\reference\mcu_framework -I ..\reference\mcu_framework_lpc845 -I ..\reference\nxp_lpc845_driver -I ..\reference\terminal --library_interface=armcc --diag_suppress=1296,186-I.\RTE\_nxp_lpc845_bootloader-IC:\Users\Danny\AppData\Local\Arm\Packs\NXP\LPC845_DFP\12.2.0-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_LPC845M301JBD64 -DCPU_LPC845M301JBD64-o .\objects\fw_define.o --omf_browse .\objects\fw_define.crf --depend .\objects\fw_define.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-I (..\source\config\fw_define.h)(0x5F87AEAF)
-I (..\reference\mcu_framework_lpc845\fw_define_type.h)(0x5F86B5E7)
-I (..\reference\mcu_framework_lpc845\fw_usart_type.h)(0x5F87A3A7)
-I (..\reference\nxp_lpc845_driver\fsl_usart.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_common.h)(0x5F86B233)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
-I (..\reference\nxp_lpc845_driver\fsl_device_registers.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\LPC845.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\core_cm0plus.h)(0x5F87B455)
-I (..\reference\nxp_lpc845_driver\cmsis_version.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_compiler.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\cmsis_armcc.h)(0x5F86B233)
-I (..\source\chip\system_LPC845.h)(0x5F86A095)
-I (..\reference\nxp_lpc845_driver\LPC845_features.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_clock.h)(0x5F86B233)
-I (..\reference\nxp_lpc845_driver\fsl_reset.h)(0x5F86B233)
-I (..\reference\mcu_framework\fw_usart.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_io_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_usart_entity.h)(0x5F86B5CC)
-I (..\reference\mcu_framework_lpc845\fw_spi_type.h)(0x5F87AEAA)
-I (..\reference\nxp_lpc845_driver\fsl_spi.h)(0x5F86B233)
-I (..\reference\mcu_framework\fw_spi.h)(0x5F86B5CC)
-I (..\reference\mcu_framework\fw_spi_entity.h)(0x5F86B5CC)
-F (..\reference\mcu_framework_lpc845\fw_define_type.h)(0x5F86B5E7)()
-F (..\reference\mcu_framework_lpc845\fw_io_type.h)(0x5F86B5E7)()
-F (..\reference\mcu_framework_lpc845\fw_spi_type.h)(0x5F87AEAA)()
-F (..\reference\mcu_framework_lpc845\fw_usart_type.h)(0x5F87A3A7)()
-F (..\reference\nxp_lpc845_driver\cmsis_armcc.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\cmsis_compiler.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\cmsis_version.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\core_cm0plus.h)(0x5F87B455)()
-F (..\reference\nxp_lpc845_driver\Framework-LPC845.lib)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_acomp.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_adc.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_capt.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_clock.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_common.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_crc.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_ctimer.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_dac.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_device_registers.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_dma.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_gpio.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_i2c.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_iap.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_inputmux.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_inputmux_connections.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_iocon.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_mrt.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_pint.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_power.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_reset.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_sctimer.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_spi.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_swm.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_swm_connections.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_syscon.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_syscon_connections.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_usart.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_wkt.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\fsl_wwdt.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\LPC845.h)(0x5F86B233)()
-F (..\reference\nxp_lpc845_driver\LPC845_features.h)(0x5F86B233)()
-F (..\reference\terminal\terminal.h)(0x5F882309)()
-F (..\reference\terminal\terminal_entity.h)(0x5F882309)()
-F (..\reference\terminal\terminal_m0plus.lib)(0x5F882309)()

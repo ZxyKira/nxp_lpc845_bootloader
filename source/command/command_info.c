@@ -1,30 +1,20 @@
 /*-----------------------------------------------------------------------------------------
- *    File Name   :loop.c
+ *    File Name   :command_info.c
  *    Version     :V1.0.0
- *    Create Date :2020-10-12
- *    Modufy Date :2020-10-13
+ *    Create Date :2020-10-15
+ *    Modufy Date :2020-10-15
  *    Information :
  */
-#include "fsl_power.h"
-#include "fsl_clock.h"
-#include "fsl_syscon.h"
-#include "LPC845.h"
-#include "stdio.h"
-
-#include "fw_chip.h"
-
+#include "terminal_entity.h"
 
 /*-----------------------------------------------------------------------------------------
  *    Parameter
  */
-#define LOGOUT(fmt, ...) terminal_write(&terminal_cache[0], sprintf(&terminal_cache[0],fmt, ##__VA_ARGS__))
 
 /*-----------------------------------------------------------------------------------------
  *    Extern Function/Variable
  */
-extern fw_io_entity_t LED[8];
-extern void terminal_write(void* str, uint32_t len);
-extern char terminal_cache[256];
+
 /*-----------------------------------------------------------------------------------------
  *    Local Type/Structure
  */
@@ -32,32 +22,38 @@ extern char terminal_cache[256];
 /*-----------------------------------------------------------------------------------------
  *    Local Variable
  */
-extern void BootJump( uint32_t *Address );
-extern void terminal_start0(void);
+const char command_info_text_cmd[] = "info";
 /*-----------------------------------------------------------------------------------------
- *    inline Function
+ *    Variable
+ */
+
+/*-----------------------------------------------------------------------------------------
+ *    Inline Function
  */
  
 /*-----------------------------------------------------------------------------------------
+ *    Local Function
+ */
+static bool command_info_handle(terminal_xfer_api_t *pApi, void* userData, int argc, char **argv){
+	pApi->sendString("rom type = bootloader\n");
+	pApi->sendString("build version = 1.0.0\n");
+	pApi->sendString("build date = 2020/10/16 01:19\n");
+	return true;
+}
+
+/*-----------------------------------------------------------------------------------------
  *    Public Function
  */
-void delay(uint32_t us){
-	uint32_t i;
-	for(i=0; i<=us; i++){
-		__NOP();
-		__NOP();
-		__NOP();
-		__NOP();
-	}
+terminal_command_t command_info_getCommand(){
+	terminal_command_t command = {
+		.command = command_info_text_cmd,
+		.userData = (void*)0x00000000,
+		.handle = command_info_handle,
+	};	
+	return command;
 }
 
-void loop(){
-
-	
-	terminal_start0();
-	
-	//BootJump((uint32_t*)0x00008000);
-}
 /*-----------------------------------------------------------------------------------------
  *    End of file
  */
+

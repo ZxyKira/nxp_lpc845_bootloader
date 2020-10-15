@@ -1,58 +1,56 @@
 /*-----------------------------------------------------------------------------------------
- *    File Name   :start.c
+ *    File Name   :terminal_entity.h
  *    Version     :V1.0.0
- *    Create Date :2020-10-06
- *    Modufy Date :2020-10-06
+ *    Create Date :2020-10-15
+ *    Modufy Date :2020-10-15
  *    Information :
  */
+#ifndef TERMINAL_ENTITY_H_
+#define TERMINAL_ENTITY_H_
 #include <stdint.h>
-#include "fw_chip.h"
+#include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C"{
+#endif //__cplusplus
 /*-----------------------------------------------------------------------------------------
  *    Parameter
  */
- 
+
 /*-----------------------------------------------------------------------------------------
  *    Extern Function/Variable
  */
-extern void periph_io_startup(void);
-extern void timer_init(void);
-extern void terminal_init0(void);
+
 /*-----------------------------------------------------------------------------------------
- *    Local Type/Structure
+ *    Type/Structure
  */
 
-/*-----------------------------------------------------------------------------------------
- *    Local Variable
- */
+typedef struct terminal_xfer_api_t{
+	char (*getCh)(void);
+	void (*putCh)(char ch);
+	void (*read)(void* buffer, int len);
+	void (*send)(const void* data, int len);
+	void (*sendString)(const char* string);
+}terminal_xfer_api_t;
 
+typedef struct _terminal_command_t{
+	const char* command;
+	void* userData;
+	bool (*handle)(terminal_xfer_api_t *pApi, void* userData, int argc, char **argv);
+}terminal_command_t;
 
 /*-----------------------------------------------------------------------------------------
- *    Inline Function
+ *    Variable
  */
  
 /*-----------------------------------------------------------------------------------------
- *    Local Function
- */ 
-void start_hw(){
-	fw_io_api.init(0);
-	
-	fw_usart_api.init(0);
+ *    Function
+ */
+ 
+#ifdef __cplusplus
 }
-
+#endif //__cplusplus
+#endif //TERMINAL_ENTITY_H_
 /*-----------------------------------------------------------------------------------------
- *    Public Function
- */ 
-
-void start(){
-	fw_chip_init();
-	start_hw();
-	
-	periph_io_startup();
-	timer_init();
-	terminal_init0();
-}
-
-/*****************************************************************************
- *	End of file
+ *    End of file
  */
