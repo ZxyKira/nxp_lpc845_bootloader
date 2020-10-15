@@ -1,0 +1,10 @@
+.\objects\system_lpc845.o: ..\source\chip\system_LPC845.c
+.\objects\system_lpc845.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\fsl_device_registers.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\LPC845.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\core_cm0plus.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\cmsis_version.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\cmsis_compiler.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\cmsis_armcc.h
+.\objects\system_lpc845.o: ..\source\chip\system_LPC845.h
+.\objects\system_lpc845.o: ..\reference\nxp_lpc845_driver\LPC845_features.h

@@ -1,0 +1,11 @@
+.\objects\periph_io.o: ..\source\method\periph_io.c
+.\objects\periph_io.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\periph_io.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\periph_io.o: ..\reference\mcu_framework_lpc845\fw_chip.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_io.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_io_entity.h
+.\objects\periph_io.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_usart.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_usart_entity.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_spi.h
+.\objects\periph_io.o: ..\reference\mcu_framework\fw_spi_entity.h
