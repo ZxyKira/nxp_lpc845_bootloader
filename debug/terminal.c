@@ -69,6 +69,8 @@ static int terminal_insertCharToBuffer(terminal_handle_t* pHandle, char ch){
 	if(pHandle->bufferPointer >= pHandle->readBufferSize)
 		return -1;
 	
+	pHandle->Abstract.Xfer.putCh(ch);
+	
 	if((ch == '\n') | (ch == '\r')){
 		pHandle->readBuffer[pHandle->bufferPointer] = '\0';
 		pHandle->bufferPointer++;

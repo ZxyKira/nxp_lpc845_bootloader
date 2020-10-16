@@ -23,6 +23,7 @@
  *    Extern Function/Variable
  */
 extern fw_io_entity_t LED[8];
+extern fw_io_entity_t BTN;
 extern void terminal_write(void* str, uint32_t len);
 extern char terminal_cache[256];
 /*-----------------------------------------------------------------------------------------
@@ -52,11 +53,18 @@ void delay(uint32_t us){
 }
 
 void loop(){
-
+	int i;
 	
-	terminal_start0();
+	for(i=0; i<6; i++){
+		delay(1000000);
+		fw_io_entity_api.setToggle(LED[1]);
+		if(fw_io_entity_api.getValue(BTN) == 0){
+			fw_io_entity_api.setLow(LED[1]);
+			terminal_start0();
+		}
+	}
 	
-	//BootJump((uint32_t*)0x00008000);
+	BootJump((uint32_t*)0x00008000);
 }
 /*-----------------------------------------------------------------------------------------
  *    End of file

@@ -25,6 +25,7 @@ char terminal_readCh(void);
 extern terminal_command_t command_info_getCommand(void);
 extern terminal_command_t command_reboot_getCommand(void);
 extern terminal_command_t command_led_getCommand(void);
+extern terminal_command_t command_upgrade_getCommand(void);
 /*-----------------------------------------------------------------------------------------
  *    Local Type/Structure
  */
@@ -63,8 +64,6 @@ static void terminal_recv_callback(fw_usart_entity_t entity, void* userData){
 
 static char terminal_abstract_xfer_getCh(void){
 	char result = terminal_readCh();
-	if((result>=32) & (result<127))
-		terminal_writeCh(result);
 	return result;
 }
 
@@ -175,6 +174,7 @@ void terminal_init0(void){
 	terminal_api.addCommand(&terminal_terminal_handle, command_info_getCommand());
 	terminal_api.addCommand(&terminal_terminal_handle, command_reboot_getCommand());
 	terminal_api.addCommand(&terminal_terminal_handle, command_led_getCommand());
+	terminal_api.addCommand(&terminal_terminal_handle, command_upgrade_getCommand());
 }
 
 void terminal_start0(void){
